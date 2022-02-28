@@ -54,6 +54,11 @@ const renderToString = (
   //Do the ENVs
   const re_env_NODE_ENV = new RegExp('_NODE_ENV_', 'g');
   renderedContent = renderedContent.replace(re_env_NODE_ENV, config.NODE_ENV);
+  const re_env_REMEMBER_ME = new RegExp('_REMEMBER_ME_', 'g');
+  renderedContent = renderedContent.replace(
+    re_env_REMEMBER_ME,
+    config.REMEMBER_ME.toString()
+  );
 
   return renderedContent;
 };
