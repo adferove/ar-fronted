@@ -6,6 +6,8 @@
   "scripts": {
     "esinstall": "node esinstall.js",
     "flow": "flow",
+    "generate": "node --no-warnings server/static_generate_run.js",
+    "generate:clear": "node --no-warnings server/static_clear.js",
     "start": "node server/index.js"
   },
   "dependencies": {
