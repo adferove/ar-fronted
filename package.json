@@ -4,6 +4,7 @@
   "description": "",
   "author": "Adrian",
   "scripts": {
+    "cypress:open": "cypress open",
     "esinstall": "node esinstall.js",
     "flow": "flow",
     "generate": "node --no-warnings server/static_generate_run.js",
@@ -19,6 +20,7 @@
     "serve-static": "^1.14.2"
   },
   "devDependencies": {
+    "cypress": "^9.5.1",
     "esinstall": "^1.1.7",
     "flow-bin": "^0.172.0"
   },

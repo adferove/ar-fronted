@@ -21,11 +21,11 @@ const Counter = (props /*: Props */) /*: string */ => {
   const { state, dispatch } /*: {state: AppState, dispatch: Dispatch} */ =
     useContext(AppContext);
 
-  const increaseCounter = () => {
+  const increaseCounter = (e) => {
     const newValue = count + 1;
     updateCounter(newValue);
   };
-  const decreaseCounter = () => {
+  const decreaseCounter = (e) => {
     const newValue = count - 1;
     updateCounter(newValue);
   };
@@ -43,9 +43,9 @@ const Counter = (props /*: Props */) /*: string */ => {
   return html`<div>
     ${count}
     <br />
-    <button onClick=${(e) => increaseCounter()}>Adds</button>
+    <button onClick=${increaseCounter}>Adds</button>
     <br />
-    <button onClick=${(e) => decreaseCounter()}>Subtract</button>
+    <button onClick=${decreaseCounter}>Subtract</button>
   </div>`;
 };
 

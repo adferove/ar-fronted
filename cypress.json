@@ -1,0 +1,9 @@
+{
+ "chromeWebSecurity": false,
+	"experimentalFetchPolyfill": true,
+	"video": false,
+	"env":{
+		"LAST_VERSION":"0.1"
+	},
+	"pluginsFile": false
+}
