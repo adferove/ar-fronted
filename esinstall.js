@@ -1,14 +1,15 @@
 // @flow
-import { install } from 'esinstall';
+import { install } from "esinstall";
 
 install(
   [
-    'htm',
-    'htm/preact',
-    'preact',
-    'preact/hooks',
-    'preact-render-to-string',
-    'preact-router',
+    "codemirror",
+    "htm",
+    "htm/preact",
+    "preact",
+    "preact/hooks",
+    "preact-render-to-string",
+    "preact-router",
   ],
-  { polyfillNode: false }
+  { polyfillNode: false },
 );

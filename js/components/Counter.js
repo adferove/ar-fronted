@@ -9,10 +9,19 @@ import { useContext, useState } from "../../web_modules/preact/hooks.js";
 // Application
 // ----------------
 import { AppContext } from "../context/AppContext.js";
+// ----------------
+// Components
+// ----------------
+import CodeEditor from "./codemirror/CodeEditor.js";
 
 /*:: type Props = {
 
 } */
+
+const config /*: {lineNumbers: boolean, mode: string} */ = {
+  lineNumbers: true,
+  mode: "javascript",
+};
 
 const Counter = (props /*: Props */) /*: string */ => {
   const [count /*: number */, setCount /*: (count:number) => void */] =
@@ -40,13 +49,18 @@ const Counter = (props /*: Props */) /*: string */ => {
     });
   };
 
-  return html`<div>
-    ${count}
-    <br />
-    <button onClick=${increaseCounter}>Adds</button>
-    <br />
-    <button onClick=${decreaseCounter}>Subtract</button>
-  </div>`;
+  return html`<${CodeEditor}
+      config="${config}"
+      heightRestricted="${false}"
+      code="Hello World"
+    />
+    <div>
+      ${count}
+      <br />
+      <button onClick=${increaseCounter}>Adds</button>
+      <br />
+      <button onClick=${decreaseCounter}>Subtract</button>
+    </div>`;
 };
 
 export default Counter;

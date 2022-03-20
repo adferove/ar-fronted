@@ -1,5 +1,6 @@
 {
   "imports": {
+    "codemirror": "./codemirror.js",
     "htm": "./htm.js",
     "htm/preact": "./htm/preact.js",
     "preact": "./preact.js",
