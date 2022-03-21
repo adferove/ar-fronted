@@ -6,6 +6,10 @@
 import { html } from "../../../web_modules/htm/preact.js";
 import AppendChild from "./AppendChild.js";
 import CodeMirror from "../../../web_modules/codemirror.js";
+// ---------------------------------------
+// Codemirror modes
+// ---------------------------------------
+import javascript from "../../../web_modules/codemirror/mode/javascript/javascript.js";
 
 /*:: type Props = {
   setText: function,

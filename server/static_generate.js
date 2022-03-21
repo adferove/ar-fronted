@@ -27,5 +27,6 @@ export const copyStaticFiles = () /*: void */ => {
   fs.copyFileSync("site.webmanifest", "./public/site.webmanifest");
 
   copyDir("js", "./public/js");
+  copyDir("css", "./public/css");
   copyDir("web_modules", "./public/web_modules");
 };

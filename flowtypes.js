@@ -36,3 +36,7 @@ declare module "../../../web_modules/preact/hooks.js" {
 declare module "../../../web_modules/codemirror.js" {
   declare module.exports: any;
 }
+
+declare module "../../../web_modules/codemirror/mode/javascript/javascript.js" {
+  declare module.exports: any;
+}

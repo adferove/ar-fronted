@@ -16,7 +16,7 @@ import Counter from "./Counter.js";
 const RouteHandler = (props /*: Props */) /*: string */ => {
   return html`
   <${Router}>
-   <${Counter} path="/counter" />
+   <${Counter} path="/" />
   </${Router}>`;
 };
 

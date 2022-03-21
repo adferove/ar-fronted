@@ -9,7 +9,10 @@
     "flow": "flow",
     "generate": "node --no-warnings server/static_generate_run.js",
     "generate:clear": "node --no-warnings server/static_clear.js",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "docker:build":"docker build . -t gcr.io/helical-mile-343802/fun-people -f Dockerfile",
+    "docker:push":"docker push gcr.io/helical-mile-343802/fun-people",
+    "cloudrun:deploy":"gcloud run deploy fun-people--prod --image gcr.io/helical-mile-343802/fun-people --port 80 --platform managed --region us-central1"
   },
   "dependencies": {
     "codemirror": "^5.65.2",

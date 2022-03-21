@@ -18,11 +18,6 @@ import CodeEditor from "./codemirror/CodeEditor.js";
 
 } */
 
-const config /*: {lineNumbers: boolean, mode: string} */ = {
-  lineNumbers: true,
-  mode: "javascript",
-};
-
 const Counter = (props /*: Props */) /*: string */ => {
   const [count /*: number */, setCount /*: (count:number) => void */] =
     useState(0);
@@ -49,10 +44,20 @@ const Counter = (props /*: Props */) /*: string */ => {
     });
   };
 
+  const setText = (input) => {
+    console.log(input);
+  };
+
+  const config /*: {lineNumbers: boolean, mode: string|Object} */ = {
+    lineNumbers: true,
+    mode: { name: "javascript", json: true },
+  };
+
   return html`<${CodeEditor}
       config="${config}"
       heightRestricted="${false}"
       code="Hello World"
+      setText=${setText}
     />
     <div>
       ${count}

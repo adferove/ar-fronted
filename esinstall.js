@@ -4,6 +4,7 @@ import { install } from "esinstall";
 install(
   [
     "codemirror",
+    "codemirror/mode/javascript/javascript",
     "htm",
     "htm/preact",
     "preact",
